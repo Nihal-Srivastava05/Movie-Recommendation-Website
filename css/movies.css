@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2e2e2e;
+  --secondary-color: #d6d6d6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+.movie-list-container {
+  padding: 0 20px;
+}
+
+.movie-list-title {
+  margin: 0;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 250px;
+  transform: translateX(0);
+  transition: all 0.75s ease-in-out;
+}
+
+.movie {
+  margin-right: 30px;
+  position: relative;
+}
+
+.movie:hover .movie-img {
+  transform: scale(1.2);
+  margin: 0 30;
+  opacity: 0.5;
+}
+
+.movie:hover .movie-title,
+.movie:hover .movie-rating,
+.movie:hover .movie-desc,
+.movie:hover .movie-wishlist-btn {
+    opacity: 1;
+}
+
+.movie-img {
+  transition: all 0.5s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.movie-title {
+  color: var(--secondary-color);
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 5%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-rating {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 18px;
+  position: absolute;
+  top: 10%;
+  left: 220px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.movie-desc {
+    color: var(--secondary-color);
+  padding: 0px;
+  font-size: 14px;
+  position: absolute;
+  top: 35%;
+  left: 50px;
+  width: 200px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-wishlist-btn {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 250px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    opacity: 0.6;
+    cursor: pointer;
+}
