@@ -41,7 +41,7 @@ body {
 .movie:hover .movie-img {
   transform: scale(1.2);
   margin: 0 30;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .movie:hover .movie-title,
@@ -65,7 +65,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   position: absolute;
-  top: 5%;
+  top: 0.5%;
   left: 50px;
   opacity: 0;
   transition: 1s all ease-in-out;
@@ -126,7 +126,7 @@ body {
     width: 120px;
     height: 120px;
     position: absolute;
-    top: 90px;
+    top: 75px;
     right: 0;
     opacity: 0.6;
     cursor: pointer;
