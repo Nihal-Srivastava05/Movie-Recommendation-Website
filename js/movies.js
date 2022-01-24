@@ -9,12 +9,27 @@ const COMEDY_URL =
   BASE_URL +
   "/discover/movie?&with_genres=35&sort_by=popularity.desc&" +
   TMDB_API_KEY;
+
+const DOCUMENTARY_URL = 
+  BASE_URL +
+  "/discover/movie?&with_genres=99&sort_by=popularity.desc&" +
+  TMDB_API_KEY;
+
+const CRIME_URL = 
+  BASE_URL +
+  "/discover/movie?&with_genres=80&sort_by=popularity.desc&" +
+  TMDB_API_KEY;
+
 const IMG_URL = "https://image.tmdb.org/t/p/w500/";
 const action_list = document.getElementById("action-list");
 const comedy_list = document.getElementById("comedy-list");
+const documentry_list = document.getElementById("documentary-list");
+const crime_list = document.getElementById("crime-list");
 
 getMovies(ACTION_URL, action_list);
 getMovies(COMEDY_URL, comedy_list);
+getMovies(DOCUMENTARY_URL, documentry_list);
+getMovies(CRIME_URL, crime_list);
 
 function getMovies(url, list) {
   fetch(url)
@@ -65,7 +80,6 @@ function scrollMovies() {
   arrows.forEach((arrow, i) => {
     const itemNumber = movieLists[i].querySelectorAll("button").length;
     let clickCounter = 0;
-    console.log(itemNumber);
     arrow.addEventListener("click", () => {
       const ratio = Math.floor(window.innerWidth / 270);
       clickCounter++;

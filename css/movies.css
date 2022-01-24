@@ -5,6 +5,7 @@
 :root {
   --primary-color: #2e2e2e;
   --secondary-color: #d6d6d6;
+  --highlight-color: #ffcd38;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
 
 .movie-list-title {
   margin: 0;
+  color: var(--highlight-color);
 }
 
 .movie-list-wrapper {
@@ -41,7 +43,7 @@ body {
 .movie:hover .movie-img {
   transform: scale(1.2);
   margin: 0 30;
-  opacity: 0.35;
+  opacity: 0.25;
 }
 
 .movie:hover .movie-title,
@@ -65,10 +67,15 @@ body {
   font-size: 32px;
   font-weight: bold;
   position: absolute;
-  top: 0.5%;
-  left: 50px;
+  top: 5%;
+  left: 20px;
   opacity: 0;
   transition: 1s all ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .movie-rating {
@@ -78,8 +85,8 @@ body {
   padding: 0 10px;
   font-size: 18px;
   position: absolute;
-  top: 10%;
-  left: 220px;
+  top: 25%;
+  left: 250px;
   opacity: 0;
   transition: 1s all ease-in-out;
 }
@@ -97,15 +104,21 @@ body {
 }
 
 .movie-desc {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
   padding: 0px;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1;
   position: absolute;
-  top: 35%;
-  left: 50px;
+  top: 40%;
+  left: 30px;
   width: 200px;
   opacity: 0;
   transition: 1s all ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
 }
 
 .movie-wishlist-btn {
