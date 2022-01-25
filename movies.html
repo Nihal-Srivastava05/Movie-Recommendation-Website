@@ -7,6 +7,47 @@
     <link rel="stylesheet" href="./css/movies.css" />
   </head>
   <body>
+    <!-- Featured Movie View -->
+    <div class="featured">
+      <div class="featured-img-slider" id="featured-list">
+        <div class="featured-slide active">
+          <img
+            class="featured-img"
+            src="./img/moviePlaceholder.jpg"
+            alt="movie-img"
+          />
+          <div class="featured-info">
+            <h2>Movie Title 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+              repellat facilis aliquam facere voluptatum omnis ea modi voluptas
+              autem
+            </p>
+          </div>
+        </div>
+        <div class="featured-slide">
+          <img
+            class="featured-img"
+            src="./img/moviePlaceholder.jpg"
+            alt="movie-img"
+          />
+          <div class="featured-info">
+            <h2>Movie Title 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+              repellat facilis aliquam facere voluptatum omnis ea modi voluptas
+              autem
+            </p>
+          </div>
+        </div>
+        <div class="featured-navigation">
+          <div class="featured-btn active"></div>
+          <div class="featured-btn"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie View by Genre -->
     <main id="main">
       <div class="movie-list-container">
         <h1 class="movie-list-title">Action Movies</h1>
@@ -99,10 +140,10 @@
       </div>
 
       <div class="movie-list-container">
-        <h1 class="movie-list-title">Documentary Movies</h1>
+        <h1 class="movie-list-title">Drama Movies</h1>
         <div class="movie-list-wrapper">
           <!-- <img class="arrow" src="./img/arrow_back.svg" alt="Back" > -->
-          <div class="movie-list" id="documentary-list">
+          <div class="movie-list" id="drama-list">
             <div class="movie">
               <img
                 class="movie-img"
@@ -127,7 +168,6 @@
           <img class="arrow" src="./img/arrow_forward.svg" alt="Forward" />
         </div>
       </div>
-
     </main>
     <script type="module" src="./js/movies.js"></script>
   </body>
