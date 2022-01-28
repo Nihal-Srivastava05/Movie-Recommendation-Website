@@ -1,39 +1,39 @@
 import { TMDB_API_KEY, BASE_URL } from "./apikey.js";
 
 const POPULAR_URL =
-  BASE_URL + "/discover/movie?sort_by=popularity.desc&" + TMDB_API_KEY;
+  BASE_URL + "/discover/tv?sort_by=popularity.desc&" + TMDB_API_KEY;
 
 const ACTION_URL =
   BASE_URL +
-  "/discover/movie?&with_genres=28&sort_by=popularity.desc&" +
+  "/discover/tv?&with_genres=10759&sort_by=popularity.desc&" +
   TMDB_API_KEY;
 
 const COMEDY_URL =
   BASE_URL +
-  "/discover/movie?&with_genres=35&sort_by=popularity.desc&" +
+  "/discover/tv?&with_genres=35&sort_by=popularity.desc&" +
   TMDB_API_KEY;
 
 const DRAMA_URL =
   BASE_URL +
-  "/discover/movie?&with_genres=18&sort_by=popularity.desc&" +
+  "/discover/tv?&with_genres=18&sort_by=popularity.desc&" +
   TMDB_API_KEY;
 
-const CRIME_URL =
+const ANIMATION_URL =
   BASE_URL +
-  "/discover/movie?&with_genres=80&sort_by=popularity.desc&" +
+  "/discover/tv?&with_genres=16&sort_by=popularity.desc&" +
   TMDB_API_KEY;
 
 const IMG_URL = "https://image.tmdb.org/t/p/w500/";
 const action_list = document.getElementById("action-list");
 const comedy_list = document.getElementById("comedy-list");
 const drama_list = document.getElementById("drama-list");
-const crime_list = document.getElementById("crime-list");
+const animation_list = document.getElementById("animation-list");
 const featured_list = document.getElementById("featured-list");
 
 getMovies(ACTION_URL, action_list);
 getMovies(COMEDY_URL, comedy_list);
 getMovies(DRAMA_URL, drama_list);
-getMovies(CRIME_URL, crime_list);
+getMovies(ANIMATION_URL, animation_list);
 
 //Show Featured List
 showFeaturedMovies(POPULAR_URL, featured_list);
@@ -43,7 +43,7 @@ function showFeaturedMovies(url, list) {
     .then((data) => {
       list.innerHTML = "";
       data.results.forEach((movie, i) => {
-        const { title, poster_path, vote_average, overview } = movie;
+        const { name, poster_path, vote_average, overview } = movie;
         const movieEl = document.createElement("div");
         if (i == 0) {
           movieEl.classList.add("featured-slide");
@@ -52,9 +52,9 @@ function showFeaturedMovies(url, list) {
           movieEl.classList.add("featured-slide");
         }
         movieEl.innerHTML = `
-        <img class="featured-img" src="${IMG_URL + poster_path}" alt="${title}">
+        <img class="featured-img" src="${IMG_URL + poster_path}" alt="${name}">
           <div class="featured-info">
-            <h2>${title}</h2>
+            <h2>${name}</h2>
             <p>${overview}</p>
           </div>
         `;
@@ -90,13 +90,13 @@ function getMovies(url, list) {
 function showMovies(data, list) {
   list.innerHTML = "";
   data.forEach((movie) => {
-    const { title, poster_path, vote_average, overview } = movie;
+    const { name, poster_path, vote_average, overview } = movie;
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
     movieEl.innerHTML = `
-    <img class="movie-img" src="${IMG_URL + poster_path}" alt="${title}" />
+    <img class="movie-img" src="${IMG_URL + poster_path}" alt="${name}" />
     <div class="movie-info">
-      <span class="movie-title">${title}</span>
+      <span class="movie-title">${name}</span>
       <span class="${getColor(
         vote_average
       )} movie-rating">${vote_average}</span>
