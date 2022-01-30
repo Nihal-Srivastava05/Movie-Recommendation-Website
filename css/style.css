@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Libre Franklin', sans-serif;
+}
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.main{
+    display: flex;
+    position: relative;
+}   
+.navbar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgb(150, 131, 131);
+    border-top: 1px solid rgb(150, 131, 131);
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.navbar ul li:hover{
+    background: rgb(158, 133, 23);
+}
+.navbar ul li:hover .fas{
+    transform: scale(1.5);
+}
+.navbar ul li a{
+    color: #000000;
+    display: block;
+}
+.navbar ul li:hover a{
+    color: rgb(207, 83, 0);
+    transform: scale(1.1);
+}
+.main .navbar ul li a .fas{
+    width: 24px;
+    padding: 4px;
+}
+.navbar{
+    width: 3vw;
+    height: 100vh;
+    background-color: #2e2e2e;
+    border: 1px solid rgb(34, 34, 34);
+    padding: 40px 0;
+}
+.navbar h2{
+    text-align: center;
+    text-transform: uppercase;  
+    margin-bottom: 40px;
+    /* border: 1px solid white;*/
+    padding: 9px;
+}
+.info p{
+    text-align: center;
+    text-decoration: none;
+}
+.navbar .social{
+    position: absolute;
+    bottom: 0;
+    transform: translate(2px);
+    display: flex;
+}
+.navbar .social a{
+    display: block;
+    width: 10px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    height: 40px;
+}
+#logo{
+    height: 40px;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    margin-left: 10px;
+}
+.upper{
+    background-color: rgb(255, 238, 0);
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+}
+#search_box{
+    top: 5px;
+    width: 35vw;
+    height: 3vh;
+    margin: 13px 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.buttons{
+    width: 9vw;
+    transform: translate(-63px);
+}
+.buttons input{
+    top: 7px;
+    margin-top: 18px;
+    transform: scale(1.2);
+}
+.buttons #signup{
+    float: right;
+}
+.content{
+    position: absolute;
+    background-color: rgb(255, 8, 0);
+    left: 5vw;
+    top: 11vh;
+    height: 80vh;
+    width: 80vw;
+}
