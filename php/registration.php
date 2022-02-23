@@ -1,46 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="reg.css">
+  <title>Registration Page</title>
 </head>
 
 <body>
-
-    <div>
-        <form action = "registration.php" method="post">
-            <div class="container"></div>
-                <h1>Registration</h1>
-                <p>Fill up the form with correct values</p>
-                
-                <label for="firstname"><b>First Name</b></label>
-                <input type="text" name="firstname" required>
-                <br>
-
-                <label for="lastname"><b>Last Name</b></label>
-                <input type="text" name="lastname" required>
-                <br>
-
-                <label for="email"><b>Email Address</b></label>
-                <input type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" required>
-                <br>
-
-                <label for="phonenumber"><b>Phone Number</b></label>
-                <input type="text" name="phonenumber">
-                <br>
-
-                <label for="password"><b>Password</b></label>
-                <input type="password" name="password" required>
-                <br>
-                
-                <input type="submit" name="create" value="Register"><br><br>
-            </div>      
+    
+    
+    <div class="main">
+        <p class="sign" align="center">Registration</p>
+        <form action="registration.php" method="post" class="form1">
+        <input class="un " type="text" align="center" name="firstname" id="firstname" placeholder="Firstname">
+        <input class="un " type="text" align="center" name="lastname" id="lastname" placeholder="Lastname">
+        <input class="un" type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" placeholder="Email" required>
+        <input class= "un" type="text" name="phonenumber" placeholder="10 digit phone number">
+        <input class="pass" type="password" align="center" name="password" placeholder="Password">
         
-        </form>
+        <input class ="submit" type="submit" name="create" value="Register"><br><br>
+                             
     </div>
+     
 </body>
+
 </html>
 
 <?php
@@ -60,7 +44,7 @@ if(isset($_POST['create']))
     
     if(mysqli_query($con,$sql))
     {
-        echo "User Created";
+        echo "<h1>User Created</h1>";
     }
 }
 
