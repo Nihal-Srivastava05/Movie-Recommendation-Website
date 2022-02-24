@@ -5,12 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="images.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Movie Recommendation System</title>
 
+    <title>Movie Recommendation System</title>
+    <script>
+        $(document).ready(function(){
+        $("#home").click(function(){
+            $("#page-content").load("./movies.html");
+        });
+        });
+
+        $(document).ready(function(){
+        $("#tv-shows").click(function(){
+            $("#page-content").load("./tvshows.html");
+        });
+        });
+    </script>
 </head>
 
 <body>
@@ -18,8 +30,8 @@
         <div class="navbar">
             <a href="#"><i class="fas fa-ad" id="logo"></i></a>
             <ul>
-                <li><a href="https://www.youtube.com/"><i class="fas fa-home"></i></a></li>
-                <li><a href="#"><i class="fas fa-tv"></i></a></li>
+                <li><a id="home" href="#"><i class="fas fa-home"></i></a></li>
+                <li><a id="tv-shows" href="#"><i class="fas fa-tv"></i></a></li>
                 <li><a href="#"><i class="fas fa-film"></i></a></li>
                 <li><a href="#"><i class="fas fa-fire"></i></a></li>
                 <li><a href="#"><i class="fas fa-heart"></i></a></li>
@@ -41,9 +53,8 @@
             </div>
         </div>
 
-        <div class="content">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, quasi!
-            </p>
+        <div class="content" id="page-content">
+            <h1>Welcome to our page!</h1>
         </div>
     </div>
 
