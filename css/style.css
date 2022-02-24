@@ -139,3 +139,108 @@ body {
     height: 92vh;
     width: 95vw;
 }
+@media (min-width:900px) and (max-width:1750px){
+    .content{
+        height: 93vh;
+        width: 93vw;
+        left: 6vw;
+        top: 6vh;
+    }
+    .navbar{
+        width: 6vw;
+        height: 100vh;
+    }
+    .upper{
+        width: 100vw;
+        height: 5vh;
+    }
+    .search{
+        width: 50px;
+        margin-left: 20px;
+    }
+    .social {
+        left: -7px;
+    }
+    #search_box{
+        margin: 6px 20px;
+        width: 40vw;
+    }
+    .buttons{
+        transform: translate(70vw);
+        height: 45px;
+        width: 15vw;
+        padding: 10px;
+    }
+    #login{
+        transform: scale(1.1);
+        margin-top: 3px;
+    }
+    #signup{
+        transform: scale(1.2);
+        margin-top: 3px;
+    
+    }
+    .buttons input{
+        height: 20px;
+        width: 50px;
+    }
+}
+
+/* this is for phones */
+@media (min-width:300px) and (max-width:840px) {
+    .content{
+        height: 93vh;
+        width: 87vw;
+        top: 6vh;
+        left: 12vw;
+    }
+    .navbar{
+        width: 12vw;
+        height: 100vh;
+    }
+    .navbar ul li {
+        padding: 3px;
+    }
+    #logo{
+        padding: 3px;
+    }
+    .navbar ul li:hover a{
+        transform: scale(1);
+    }
+    .upper{
+        width: 100vw;
+        height: 5vh;
+    }
+    .search{
+        width: 50px;
+        margin-left: 20px;
+    }
+    .social {
+        left: -7px;
+    }
+    #search_box{
+        
+        margin: 6px 20px;
+        width: 40vw;
+    }
+    .buttons{
+        transform: translate(40vw);
+        height: 5vh;
+        width: 29vw;
+    }
+    #login{
+        transform: scale(0.8);
+        margin-top: 8px;
+        height: 3vh;
+    }
+    #signup{
+        transform: scale(0.8);
+        margin-top: 8px;
+        height: 3vh;
+        /* transform: translateY(-30px) */
+    }
+    .buttons input{
+        height: 20px;
+        width: 50px;
+    }
+}
