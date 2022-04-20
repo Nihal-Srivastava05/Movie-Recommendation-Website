@@ -90,7 +90,7 @@ function getMovies(url, list) {
 function showMovies(data, list) {
   list.innerHTML = "";
   data.forEach((movie) => {
-    const { name, poster_path, vote_average, overview } = movie;
+    const { name, poster_path, vote_average, overview, id } = movie;
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
     movieEl.innerHTML = `

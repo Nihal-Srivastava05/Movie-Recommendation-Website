@@ -17,7 +17,7 @@
 
     <script>
       $(document).ready(function () {
-        $("#home").click(function () {
+        $("#movies").click(function () {
           $("#page-content").load("./movies.html");
         });
       });
@@ -25,6 +25,12 @@
       $(document).ready(function () {
         $("#tv-shows").click(function () {
           $("#page-content").load("./tvshows.html");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#favourite").click(function () {
+          $("#page-content").load("./wishlist.html");
         });
       });
     </script>
@@ -36,22 +42,22 @@
         <a href="index.html"><i class="fas fa-ad" id="logo"></i></a>
         <ul>
           <li>
-            <a id="home" href="#"><i class="fas fa-home"></i></a>
+            <a id="home" href="index.html"><i class="fas fa-home"></i></a>
           </li>
           <li>
-            <a id="tv-shows" href="#"><i class="fas fa-tv"></i></a>
+            <a id="movies" href="#"><i class="fas fa-tv"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-film"></i></a>
+            <a id="tv-shows" href="#"><i class="fas fa-film"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-fire"></i></a>
+            <a id="recommend" href="#"><i class="fas fa-fire"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-heart"></i></a>
+            <a id="favourite" href="#"><i class="fas fa-heart"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-star"></i></a>
+            <a href="star"><i class="fas fa-star"></i></a>
           </li>
         </ul>
         <div class="social">

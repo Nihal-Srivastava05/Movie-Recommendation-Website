@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap");
+
+:root {
+  --primary-color: #2e2e2e;
+  --secondary-color: #d6d6d6;
+  --highlight-color: #ffcd38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+:root {
+  --primary-color: #2e2e2e;
+  --secondary-color: #d6d6d6;
+  --highlight-color: #ffcd38;
+}
+
+.heading {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+.main {
+  display: flex;
+  position: relative;
+}
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-main-page {
+  width: 300px;
+  height: 40%;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-main-page img {
+  width: 100%;
+}
+
+.movie-info-main-page {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info-main-page h3 {
+  margin-top: 0;
+}
+
+.movie-info-main-page span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info-main-page span.green {
+  color: lightgreen;
+}
+
+.movie-info-main-page span.orange {
+  color: orange;
+}
+
+.movie-info-main-page span.red {
+  color: red;
+}
+
+.overview-main-page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 1rem;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+} 
+
+.movie-main-page:hover .overview-main-page {
+  transform: translateY(0);
+}

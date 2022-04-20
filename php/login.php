@@ -46,7 +46,6 @@
         echo "<h1><center> Login successful </center></h1>";  
         $sql_id = "select * from users where email = '$email' and password = '$password'";
         $result_id = mysqli_query($con, $sql);  
-        // $row_id = mysqli_fetch_array($result); 
         while ($row_id = mysqli_fetch_array($result_id)) {
             $_SESSION["userID"] = $row_id['id'];
         }
