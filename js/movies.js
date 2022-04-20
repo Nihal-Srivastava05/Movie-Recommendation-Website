@@ -90,10 +90,12 @@ function getMovies(url, list) {
 function showMovies(data, list) {
   list.innerHTML = "";
   data.forEach((movie) => {
-    const { title, poster_path, vote_average, overview } = movie;
+    const { title, poster_path, vote_average, overview, id } = movie;
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
     movieEl.innerHTML = `
+    <form name="wishlist" action="php/wishlist.php" method="POST">
+    <input type="hidden" value="${id}" name="movieID" />
     <img class="movie-img" src="${IMG_URL + poster_path}" alt="${title}" />
     <div class="movie-info">
       <span class="movie-title">${title}</span>
@@ -104,7 +106,8 @@ function showMovies(data, list) {
     <div class="movie-desc">
       ${overview}
     </div>
-    <button class="movie-wishlist-btn"><img src="./img/favorite_icon.svg" alt="Wishlist"></button>
+    <input type="submit" class="movie-wishlist-btn"><img src="./img/favorite_icon.svg" alt="Wishlist"></input>
+    </form>
     `;
     list.appendChild(movieEl);
   });
@@ -127,7 +130,7 @@ function scrollMovies() {
   const arrows = document.querySelectorAll(".arrow");
   const movieLists = document.querySelectorAll(".movie-list");
   arrows.forEach((arrow, i) => {
-    const itemNumber = movieLists[i].querySelectorAll("button").length;
+    const itemNumber = movieLists[i].querySelectorAll("input").length/2;
     let clickCounter = 0;
     arrow.addEventListener("click", () => {
       const ratio = Math.floor(window.innerWidth / 270);
