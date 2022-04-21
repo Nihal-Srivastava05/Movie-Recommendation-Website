@@ -1,51 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="images.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Movie Recommendation System</title>
 
-</head>
+    <script>
+      $(document).ready(function () {
+        $("#movies").click(function () {
+          $("#page-content").load("./movies.html");
+        });
+      });
 
-<body>
+      $(document).ready(function () {
+        $("#tv-shows").click(function () {
+          $("#page-content").load("./tvshows.html");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#favourite").click(function () {
+          $("#page-content").load("./wishlist.html");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
     <div class="main">
-        <div class="navbar">
-            <a href="#"><i class="fas fa-ad" id="logo"></i></a>
-            <ul>
-                <li><a href="https://www.youtube.com/"><i class="fas fa-home"></i></a></li>
-                <li><a href="#"><i class="fas fa-tv"></i></a></li>
-                <li><a href="#"><i class="fas fa-film"></i></a></li>
-                <li><a href="#"><i class="fas fa-fire"></i></a></li>
-                <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                <li><a href="#"><i class="fas fa-star"></i></a></li>
-            </ul>
-            <div class="social">
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-facebook-square"></i></a>
-            </div>
+      <div class="navbar">
+        <a href="index.html"><i class="fas fa-ad" id="logo"></i></a>
+        <ul>
+          <li>
+            <a id="home" href="index.html"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a id="movies" href="#"><i class="fas fa-tv"></i></a>
+          </li>
+          <li>
+            <a id="tv-shows" href="#"><i class="fas fa-film"></i></a>
+          </li>
+          <li>
+            <a id="recommend" href="#"><i class="fas fa-fire"></i></a>
+          </li>
+          <li>
+            <a id="favourite" href="#"><i class="fas fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="star"><i class="fas fa-star"></i></a>
+          </li>
+        </ul>
+        <div class="social">
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-facebook-square"></i></a>
         </div>
+      </div>
 
-        <div class="upper">
-            <div class="search">
-                <input type="search" name="search" id="search_box" placeholder="Search...">
-            </div>
-            <div class="buttons">
-                <a href="#"><input type="button" value="Login" id="login"></a>
-                <a href="#"><input type="button" value="Sign up" id="signup"></a>
-            </div>
+      <div class="upper">
+        <div class="search">
+          <form id="search-form">
+            <input
+              type="text"
+              name="search"
+              id="search_box"
+              placeholder="Search..."
+            />
+          </form>
         </div>
+        <div class="buttons">
+          <a href="php/login.php"><input type="button" value="Login" id="login" /></a>
+          <a href="php/registration.php"><input type="button" value="Sign up" id="signup" /></a>
+        </div>
+      </div>
 
-        <div class="content">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, quasi!
-            </p>
+      <div class="content" id="page-content">
+
+        <div class="home-page">
+          <div class="movie-main-page">
+            <img src="./img/moviePlaceholder.jpg" alt="Image" />
+
+            <div class="movie-info-main-page">
+              <h3>Movie Title</h3>
+              <span class="green">9.8</span>
+            </div>
+
+            <div class="overview-main-page">
+              <h3>Overview</h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+              vero accusamus magni veniam culpa quisquam voluptate, voluptates
+              eum id ipsam tempore molestias dignissimos provident dolorum
+              cumque alias quam est odit.
+            </div>
+          </div>
+
+          <div class="movie-main-page">
+            <img src="./img/moviePlaceholder.jpg" alt="Image" />
+
+            <div class="movie-info-main-page">
+              <h3>Movie Title</h3>
+              <span class="green">9.8</span>
+            </div>
+
+            <div class="overview-main-page">
+              <h3>Overview</h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+              vero accusamus magni veniam culpa quisquam voluptate, voluptates
+              eum id ipsam tempore molestias dignissimos provident dolorum
+              cumque alias quam est odit.
+            </div>
+          </div>
+
+          <div class="movie-main-page">
+            <img src="./img/moviePlaceholder.jpg" alt="Image" />
+
+            <div class="movie-info-main-page">
+              <h3>Movie Title</h3>
+              <span class="green">9.8</span>
+            </div>
+
+            <div class="overview-main-page">
+              <h3>Overview</h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+              vero accusamus magni veniam culpa quisquam voluptate, voluptates
+              eum id ipsam tempore molestias dignissimos provident dolorum
+              cumque alias quam est odit.
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
 
-</body>
+    <script type="module" src="./js/search.js"></script>
+  </body>
 </html>
