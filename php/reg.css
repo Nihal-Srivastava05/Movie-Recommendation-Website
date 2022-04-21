@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(to bottom, #ff0000, #da0202, #a80000, #810000,#690000, #471700, #000000 );
+    background: linear-gradient(to bottom, #ffff00, #ffe600, #daa002, #a88100, #817000,#694600, #472800, #000000 );
     font-family: 'Ubuntu', sans-serif;
-    height: 45em;
+    height: 50em;
 }
 
 .main {
