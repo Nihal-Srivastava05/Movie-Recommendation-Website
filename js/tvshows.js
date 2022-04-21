@@ -106,7 +106,7 @@ function showMovies(data, list) {
     <div class="movie-desc">
       ${overview}
     </div>
-    <input type="submit" class="movie-wishlist-btn"><img src="./img/favorite_icon.svg" alt="Wishlist"></input>
+    <input type="image" class="movie-wishlist-btn" src="./img/favorite_icon.svg" alt="submit">
     </form>
     `;
     list.appendChild(movieEl);
