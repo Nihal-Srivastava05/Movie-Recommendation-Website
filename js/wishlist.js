@@ -5,6 +5,11 @@ const IMG_URL = "https://image.tmdb.org/t/p/w500/";
 
 const main = document.getElementById("page-content");
 main.innerHTML = "";
+const heading = document.createElement("h1");
+const textNode = document.createTextNode("Wishlist");
+heading.appendChild(textNode);
+heading.classList.add('heading');
+main.append(heading);
 const homeEle = document.createElement("div");
 homeEle.classList.add("home-page");
 
@@ -56,10 +61,14 @@ function reqListener() {
 var oReq = new XMLHttpRequest();
 oReq.onload = function () {
   var movies = this.responseText;
+  movies.trim();
   movies = movies.slice(1, -1);
   movies = movies.split(",");
   movies.forEach((movie) => {
     var movieID = movie.slice(1, -1);
+    if (isNaN(movieID)) {
+      movieID = movieID.slice(2);
+    }
     getMovies(WISHLIST_URL + movieID + "?" + TMDB_API_KEY);
   });
   main.append(homeEle);
