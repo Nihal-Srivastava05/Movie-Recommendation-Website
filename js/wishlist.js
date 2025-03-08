@@ -5,6 +5,11 @@ const IMG_URL = "https://image.tmdb.org/t/p/w500/";
 
 const main = document.getElementById("page-content");
 main.innerHTML = "";
+const heading = document.createElement("h1");
+const textNode = document.createTextNode("Wishlist");
+heading.appendChild(textNode);
+heading.classList.add('heading');
+main.append(heading);
 const homeEle = document.createElement("div");
 homeEle.classList.add("home-page");
 
